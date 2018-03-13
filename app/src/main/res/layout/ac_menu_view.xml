@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+   >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+             />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.test.customview.view.MenuView
+            android:id="@+id/menuView"
+            android:background="@drawable/shape_bg"
+            android:layout_centerInParent="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp" >
+            <ImageView
+                android:src="@drawable/setting_wechat_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:src="@drawable/setting_sina_weibo_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:src="@drawable/setting_tencent_qq_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:src="@drawable/setting_phone_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </com.test.customview.view.MenuView>
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
