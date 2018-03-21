@@ -8,6 +8,8 @@ import android.view.MenuItem;
 
 import com.test.customview.R;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by hhj on 2018/3/1.
  */
@@ -19,6 +21,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+        ButterKnife.bind(BaseActivity.this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if(toolbar!=null){
             setSupportActionBar(toolbar);

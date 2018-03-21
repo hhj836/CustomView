@@ -19,8 +19,10 @@ import com.jude.easyrecyclerview.EasyRecyclerView;
 import com.jude.easyrecyclerview.adapter.BaseViewHolder;
 import com.jude.easyrecyclerview.adapter.RecyclerArrayAdapter;
 import com.jude.easyrecyclerview.decoration.DividerDecoration;
+import com.test.customview.activity.ChartActivity;
 import com.test.customview.activity.MenuViewActivity;
 import com.test.customview.activity.VolumeActivity;
+import com.test.customview.activity.ZhiHuADActivity;
 import com.test.customview.utils.Utils;
 import com.test.customview.view.MenuView;
 
@@ -35,6 +37,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
     private final static  int MENU_VIEW=0;
     private final static  int VOLUME_VIEW=1;
+    private final static  int ZHIHU_AD=2;
+    private final static  int CHART=3;
     private ArrayList<String> titleList=new ArrayList<>();
     EasyRecyclerView mList;
     @Override
@@ -60,6 +64,12 @@ public class MainActivity extends AppCompatActivity {
                         case VOLUME_VIEW:
                             startActivity(new Intent().setClass(MainActivity.this, VolumeActivity.class));
                             break;
+                        case ZHIHU_AD:
+                            startActivity(new Intent().setClass(MainActivity.this, ZhiHuADActivity.class));
+                            break;
+                        case CHART:
+                            startActivity(new Intent().setClass(MainActivity.this, ChartActivity.class));
+                            break;
                     }
             }
         });
@@ -69,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
     private void initTitle(){
         titleList.add("menuView");
         titleList.add("volumeView");
+        titleList.add("知乎AD");
+        titleList.add("chart");
     }
     private  class MyAdapter extends RecyclerArrayAdapter<String>{
 
